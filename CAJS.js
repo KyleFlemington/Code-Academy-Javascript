@@ -268,3 +268,47 @@ var nameString = function(Name) {
 	return "Hi, I am" + " " + name;
 }
 console.log(nameString("Kyle"))
+
+
+/* 2.12 Functions & If / Else */
+
+var sleepCheck = function(numHours) {
+    if (numHours >= 8)
+        return "You're getting plenty of sleep! Maybe even too much!";
+    
+    else (numHours < 8)
+        return "Get some more shut eye!";
+}
+sleepCheck(10)
+sleepCheck(5)
+sleepCheck(8)
+
+
+
+
+/* Build Rock Paper Scissors */
+//Good old rock. Nothing beats rock.
+// ohh, typical bart. Always picks rock.
+
+var userChoice = prompt("Do you choose rock, paper, or scissors?")
+var computerChoice = Math.random();
+
+	if (computerChoice < .34) {
+		computerChoice = "rock"
+	} else if (computerChoice <= .67) {
+		computerChoice = "paper"
+	} else {
+		computerChoice = "scissors";
+	}
+console.log ("Computer: " + computerChoice);
+
+var compare = function(choice1, choice2) {
+	if (choice1 === choice2) {
+		return "The result is a tie!"
+	} if (choice2 == "scissors") {
+		return "rock wins"
+	} else if (choice1 == "paper") {
+		return "paper wins"
+	}
+}
+
