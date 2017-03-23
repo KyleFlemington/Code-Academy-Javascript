@@ -153,3 +153,118 @@ myName = "Ky"
 // On line 9, use console.log to print out the myName variable.
 console.log(myName);
 
+/* 1.27 Conclusion: Part 1 */
+var myColor = "Green";
+console.log(myColor.length);
+
+
+/* 1.28 Conclusion: Part 2*/
+
+if (5 == "kyle".length){
+  console.log("false");
+} else {
+  console.log("I finished my first course!");
+}
+
+
+/* 2.1 Introduction */
+var spped = 65;
+
+if (speed > 80) {
+	console.log("Slow Down");
+} else {
+	console.log("Drive Safe")
+}
+
+
+/* 2.2 Introducing Functions*/
+
+var divideByThree = function(number) {
+	var val = number / 3
+	console.log(val)
+};
+divideByThree(12);
+
+
+/* 2.3 Function Syntax */
+
+var greeting = function(name) {
+	console.log("Great to see you," + " " + name)
+}
+greeting("Kyle")
+
+
+/* 2.4 How does a function work */
+var foodDemand = function(food) {
+	console.log("I want to eat" + " " + food)
+}
+foodDemand("steak");
+
+/* 2.5 Tying it all together */
+
+var calculate = function(number){
+	var val = number * 10;
+	console.log(val);
+};
+
+var greeting = function(name) {
+	console.log((name));
+}
+greeting("Kyle");
+
+
+/* 2.6 Don't Repeat Yourself */
+
+var orangeCost = function(cost) {
+	var costOrange = cost * 5;
+	console.log(costOrange)
+}
+orangeCost(5)
+
+/* 2.7 Return Keyword */
+var timesTwo = function(number) {
+	return number * 2;
+}
+var newNumber = timesTwo(50) {
+	console.log(newNumber)
+}
+
+
+/* 2.8 Functions, return and if / else */
+
+var quarter = function(number){
+	return number / 4;
+}
+
+if (quarter(36) % 3 === 0) {
+	console.log("This statement is true")
+} else {
+	console.log("This statement is false")
+}
+
+/* 2.9 Functions with two parameters */
+var perimterBox = function(length, width) {
+	return length + length + width + width;
+}
+perimterBox(3,3)
+
+
+/* 2.10 Global vs Local Variables */
+
+var my_number = 7 //Global Variable
+
+var twoTimes = function(number) {
+	var my_number = number * 2
+	console.log("Inside the function my_number is: " +  my_number)
+}
+twoTimes(7)
+
+console.log("Outside the function my_number is: " + my_number)
+
+
+/* 2.11 Functions recap */
+
+var nameString = function(Name) {
+	return "Hi, I am" + " " + name;
+}
+console.log(nameString("Kyle"))
