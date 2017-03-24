@@ -312,3 +312,85 @@ var compare = function(choice1, choice2) {
 	}
 }
 
+
+/* 3.1 Why use for loops? */
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+
+
+/* 3.2 First for Loop */
+for(var counter = 1; counter < 11; counter++) {
+	console.log(counter)
+}
+
+
+/* 3.3 Starting the foor loop */
+for (var i = 5; i < 11; i++) {
+	console.log(i)
+}
+
+/* 3.4 Ending the for loop */
+for (var i = 4; i <=23; i++) {
+	console.log(i)
+}
+
+/* 3.5 Controlling the for loop */
+for (var i = 5; i <=50; i+=5) {
+	console.log(i);
+}
+
+/* 3.6 How does it work? */
+for (var i = 8; i <=120; i+=12) {
+	console.log(i)
+}
+
+/* 3.7 PRactice counting down */ {
+	for (var i = 10; i >= 10; i--)
+		console.log(i)
+}
+
+/* 3.8 Last pratice for loop */
+for (i = 100; i > 0; i -= 5) {
+	console.log(i)
+}
+
+/* 3.9 Meet arrays */
+var junk = ["garbage", "trash", 1, 3];
+console.log(junk)
+
+/* 3.10 Array Positions */
+var junkData = ["Eddie Murphy", 49, "peanuts", 31];
+console.log(junkData[3])
+
+/* 3.11 Loops and Arrays I */
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Amsterdam"]
+for (var i = 0; i < cities.length; i++){
+	console.log("I would like to viist " + cities[i])
+}
+
+
+/* 3.12 Loops and Arrays II */
+var names = ["steven", "jacob", "brent", "jack", "john"];
+
+for (var i = 0; i < names.length; i++) {
+	console.log("I know someone called " + names[i])
+}
+
+
+/* Search Text for your name */
+
+var text = "Kyle, I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate, Kyle. All those moments will be lost in time, like tears in rain. Time to die Kyle"
+
+var myName = "Kyle"
+
+var hits = []
+
+for (var i = 0; i < text.length; i++) {
+	if (text[i] === "K") {
+		for (var j = i; j < (myName.length + i); j++)
+			hits.push(text[j])
+	}
+}
