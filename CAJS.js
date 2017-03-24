@@ -394,3 +394,103 @@ for (var i = 0; i < text.length; i++) {
 			hits.push(text[j])
 	}
 }
+
+
+
+/* 4.2 While Syntax */
+
+var understand = true;
+
+while (understand === true) {
+	console.log("I'm learing while loops!")
+	understand = false;
+}
+
+
+/* 4.3 A Fellow of Inifinite Loops */
+
+understand = true;
+
+while(understand){
+	console.log("I'm learning while loops!");
+    understand = false;	
+}
+
+/* 4.4 Brevity is the soul of programming */
+
+var bool = true;
+
+while (bool) {
+	console.log("Less is more!")
+	bool = false;
+}
+
+/* 4.5 Pratice makes perfect */
+
+var loop = function() {
+	var i = 0;
+	while (i < 3) {
+		console.log("I'm looping!");
+		i++
+	}
+}
+loop();
+
+/* 4.6 Solo Flight */
+
+var i = true;
+var soloLoop = function() {
+	while (i === true) {
+		console.log("Looped Once!")
+		i = false;
+	}
+}
+soloLoop();
+
+/* 4.8 When to 'while' and when to 'for' */
+
+for (var count = 0; count < 10; count++) {
+	console.log(count)
+}
+
+var count = 0;
+while (count < 10) {
+	console.log(count)
+	count++
+}
+
+
+/* 4.9 The 'do' / 'while' loop */
+
+var loopCondition = false;
+do {
+	console.log("I'm gonna stop looping cause my condition is " + loopCondition + "!")
+	} while (loopCondition)
+}
+
+
+/* To learn it, you gotta do it */
+
+var count = 1;
+
+var getToDaChoppa = function() {
+	do {
+		console.log("GET DOWN")
+		count ++
+	} while (count < 20)
+}
+
+getToDaChoppa();
+
+/* 4.11 Review */
+for (var count = 1; count < 2; count ++) {
+	console.log("Hello World")
+}
+
+do {
+	console.log("Hello World")
+	count++
+} while (count < 2);
+
+
+/* Dragon Slayer */
