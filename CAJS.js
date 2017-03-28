@@ -521,3 +521,143 @@ while(slaying){
 }
 
 
+
+
+/* 5.1 If/Else */
+
+var isEven = function(number) {
+	if (number % 2 === 0){
+		return true;
+	} else {
+		return false;
+	}
+}
+isEven(2)
+
+
+/* 5.2 If / Else If / Else */
+var isEven = function(number) {
+	if (number % 2 === 0){
+		return true;
+	} else if (isNaN(number)){
+		return "Number Please"
+	} else {
+		return false;
+	}
+};
+isEven(2)
+
+
+/* 5.3 For a While */
+var studying = true;
+var prettyGirl = 8
+
+while(studying) {
+	console.log("Pay Attention")
+	if (prettyGirl > 8) {
+	studying = false
+	}
+}
+
+/* 5.5 Adding to an existing switch */ {
+var color = prompt("What's your favourite primary color?", "Type your favourite color here");
+
+switch(color) {
+	case 'red':
+		console.log("Red's a good color!");
+		break;
+	case 'blue':
+		console.log("That's my favourite color");
+		break;
+	case 'yellow':
+		console.log("That's a shitty color");
+		break;
+	default:
+		console.log("That's not a primary color dibshit")
+}
+
+/* 5.7 More practice with switch */
+
+var answer = prompt("What's your political party?")
+
+switch(answer){
+	case 'Liberals':
+		console.log("Red - Justin Trudeau")
+		break;
+	case 'Conservatives':
+		console.log("Blue - Maxime Bernier")
+		break;
+	case 'NDP':
+		console.log("Orange - TBD")
+		break;
+	case 'Green':
+		console.log("Green - Theresa May")
+		break;
+	default:
+		console.log("Nah.")
+}
+
+
+/* 5.11 AND */
+var hungry = true;
+var foodHere = true;
+
+var eat = function() {
+	if ( (hungry == true) && (foodHere == true) ) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+/* 5.12 OR */
+var tired = true;
+var bored = false;
+
+var nap = function() {
+	if ( (tired == true) || (bored == true) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/* 5.13 NOT */
+var programming = false;
+
+var happy = function() {
+	if (programming == false) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/* Code Your Own Adventure - Trolls */
+var dollars = 0;
+var cents = 0;
+var fat = true;
+var outOfShape = true;
+var user = prompt("You are walking along a white cobble-stone bridge, a stream trickles underneath. A troll jumps out. Do you: Fight? Pay? Run?").toUpperCase();
+
+switch(user) {
+    case 'Fight':
+        break;
+    case 'Pay':
+            if ( (dollars < 1) && (cents < 1) ) {
+                console.log("You're broke.")
+            } else {
+                console.log("You pay the troll")
+            }
+        break;
+    case 'Run':
+            if ( (fat === true) || (outOfShape === true) ){
+            console.log("fatBoy")
+        } else {
+            console.log("Look at that stride")
+        }
+        break;
+    default:
+}
