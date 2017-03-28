@@ -661,3 +661,60 @@ switch(user) {
         break;
     default:
 }
+
+/* 6.2 Access by offset */
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+
+console.log(languages[2])
+
+
+/* 6.3 Array Properties */
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+console.log(languages.length)
+
+
+/* 6.4 Iterating Over an Array */
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+
+for(var i = 0; i < languages.length; i++) {
+    console.log(languages[i])
+    }
+
+/* 6.5 Heterogeneous Arrays */
+var myArray = [42, true, 'book']
+
+
+/* 6.6 Array of Arrays */
+var newArray = [[11,12,13],[21,22,23],[31,32,33]]
+
+
+/* 6.7 Jagged Arrays */
+var jagged = [[11,12,13],[21,22],[31]]
+
+
+/* 6.10 Objects */
+var me = {
+    name: 'Kyle',
+    age: 27,
+}
+
+/* 6.11 Creating a new object */
+var myObj = new Object();
+myObj.name = 'Kyle'
+myObj.age = 27
+
+/* 6.12 Practice makes perfect */
+var object1 = new Object();
+var object2 = new Object();
+var object3 = {};
+
+object1.name = "kyle"
+object2.name = "steve"
+object3.name = "mike"
+
+/* 6.14 Heterogeneous Arrays */
+var myArray = [12, false, 'book', {}];
+
+
+/* 6.15 Multidemnsional Arrays */
+var newArray = [ [1,2],['shoe'],[{}] ];
