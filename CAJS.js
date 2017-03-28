@@ -494,3 +494,30 @@ do {
 
 
 /* Dragon Slayer */
+
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2);
+var damageThisRound = Math.floor(Math.random()*5 + 1);
+var totalDamage = 0;
+
+while(slaying){
+	slaying = false;
+
+	if(youHit === true) {
+		console.log("You hit the dragon!")
+		totalDamage += damageThisRound;
+
+		if(totalDamage >= 4) {
+			console.log("The Dragon died")
+			slaying = false;
+		} else {
+			youHit;
+		}
+
+	} else {
+		console.log("You dead")
+		slaying = false;
+	}
+}
+
+
