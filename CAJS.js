@@ -718,3 +718,32 @@ var myArray = [12, false, 'book', {}];
 
 /* 6.15 Multidemnsional Arrays */
 var newArray = [ [1,2],['shoe'],[{}] ];
+
+
+/* Contact List */
+var friends = {
+	bill: {
+		firstName: "bill",
+		lastName: "gates",
+		number: 2156888144,
+		address: ["USA"]
+	},
+	steve: {
+		firstName: "steve",
+		lastName: "jobs",
+		number: 2156444596,
+		address: ["USA"],
+	},
+};
+
+var search = function(name) {
+	for (var firstName in friends) {
+		if (friends.steve.firstName === "steve") {
+			console.log(friends.steve);
+			return friends.steve;
+			} else {
+			console.log("didnt find a name");
+			}
+		}
+};
+
