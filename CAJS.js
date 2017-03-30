@@ -840,7 +840,71 @@ var bicycle = {
 var multiply = function(x, y) {
     return x * y;
 }
-
 multiply(7,3)
 
 
+/* 7.14 So What's a method? */
+bob.setAge(20);
+
+
+/* 7.16 The 'this' keyword */
+bob.setAge(50);
+
+
+/* 7.17 'this' works for everyone */
+var susan = new Object();
+	susan.age = 25;
+	susan.setAge = setAge;
+
+susan.setAge(35);
+
+/* 7.18 Make Your Own Method */
+rectangle.setWidth = function (newWidth) {
+	this.width = newWidth;
+}
+
+rectangle.setWidth(8);
+rectangel.setHeight(6);
+
+/* 7.19 More Kinds of Methods */
+square.calcArea = function() {
+	return this.sideLength * this.sideLength;
+}
+var a = sqaure.calcArea(5);
+
+
+/* 7.12 Custom Constructors */
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+
+var george = new Person('George Washington', 275)
+
+
+/* 7.22 Try It Out */
+function Dog(age, color) {
+    this.age = age;
+    this.color = color;
+}
+
+/* 7.23 More Options */ 
+var sally = new Person('Sally Bowles', 39);
+var holden =  new Person('Holden Caulfield', 16);
+
+/* 7.24 Constructors with Methods */
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calcArea = function() {
+      return this.height * this.width;
+  };
+  // put our perimeter function here!
+  this.calcPerimeter = function() {
+    return ( (this.height * 2) + ( this.width * 2) )  
+    }
+}
+
+var rex = new Rectangle(7,3);
+var area = rex.calcArea(4, 3);
+var perimeter = rex.calcPerimeter(4, 3);
