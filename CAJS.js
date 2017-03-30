@@ -747,3 +747,100 @@ var search = function(name) {
 		}
 };
 
+
+/* 7.1 We've come a long, long */
+
+var answer = true;
+
+
+/* 7.2 Through the hard times... */
+var answer = multiplesOfEight[5] % 8 !== 0;
+
+
+
+/* 7.3 ...And the good! */
+for (var i = 1; i < 21; i++) {
+    if (( i % 3 === 0 ) && ( i % 5 === 0)) {
+        console.log("FizzBuzz")
+    } else if ( i % 5 === 0 ) {
+        console.log("Buzz")
+    } else if ( i % 3 === 0 )  {
+        console.log("Fizz")
+    } else {
+        console.log(i)
+    }
+}
+
+
+
+/* 7.4 I have to celebrate you baby */
+var getReview = function(movie) {
+	switch(movie){
+		case 'Toy Story 2':
+			return('Great Story. Mean prospector.')
+			break;
+
+		case 'Finding Nemo':
+			return('Coll animation, and funny turtles')
+			break;
+
+		case 'The Lion King':
+			return('Great songs.')
+			break;
+
+		default:
+	}
+}
+
+getReview('Toy Story 2')
+
+
+/* 7.6 Intro */
+var bob = {};
+
+
+/* 7.7 Properties */
+var me = {
+	age: 27.
+	country: "Canada"
+};
+
+/* 7.8 Accessing Properties */
+var name2 = susan.name;
+var age2 = susan.age;
+
+/* 7.9 Accessing Properties part 2 */
+var weight = dog['weight'];
+var age = dog['age'];
+
+/* 7.10 Another Way to Create */
+var susan2 = new Object();
+susan2.name = "Susan Jordan";
+susan2.age = 24;
+
+/* 7.11 Putting it all together */
+var snoopy = {
+    species: 'beagle',
+    age: 10
+};
+
+var buddy = new Object();
+buddy.species = 'golden retriever';
+buddy.age = 5
+
+/* 7.12 More Practice Making Objects */
+var bicycle = {
+    speed: 0,
+    gear: 1,
+    frame_material: 'carbon fiber'
+};
+
+
+/* 7.13 Function Review */
+var multiply = function(x, y) {
+    return x * y;
+}
+
+multiply(7,3)
+
+
