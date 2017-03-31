@@ -908,3 +908,119 @@ function Rectangle(height, width) {
 var rex = new Rectangle(7,3);
 var area = rex.calcArea(4, 3);
 var perimeter = rex.calcPerimeter(4, 3);
+
+
+/* 7.25 Constructors in Review */
+function Rabbit(adjective) {
+    this.adjective = adjective;
+    this.describeMyself = function() {
+        console.log("I am a " + this.adjective + " rabbit");
+    };
+}
+
+// now we can easily make all of our rabbits
+
+var rabbit1 = new Rabbit('fluffy')
+var rabbit2 = new Rabbit('happy')
+var rabbit3 = new Rabbit('sleepy')
+
+
+/* 7.26 Array of Objects */
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person('timmy', 6);
+
+/* 7.27 Loop The Loop */
+
+// Our Person constructor
+function Person(name,age) {
+this.name = name;
+this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person('alice', 40);
+family[1] = new Person('bob', 42);
+family[2] = new Person('michelle', 8);
+family[3] = new Person('timmy', 6);
+
+// loop through our new array
+for(var i = 0; i < family.length; i++) {
+    console.log(family[i].name)
+}
+
+
+
+/* 7.28 Passing Objects into functions */
+var diff = ageDifference(alice, billy)
+
+
+/* 7.29 Try It Out */
+var olderAge = function(person1, person2) {
+ return (person1.age > person2.age) ? person1.age : person2.age;    }
+
+
+
+ /* Building an Address Book */
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+
+function list() {
+	var contactsLength = contacts.length;
+	for (var i = 0; i < contactsLength; i++) {
+		printPerson(contacts[i]);
+	}
+}
+
+/*Create a search function
+then call it passing "Jones"*/
+
+function search(lastName){
+    var contactsLength = contacts.length;
+    for (var i = 0; i < contacts.length; i++) {
+        if (contacts[i].lastName === lastName) {
+            printPerson(contacts[i])
+            }
+        }
+}
+
+function add(firstName, lastName, email, phoneNumber) {
+    contacts[contacts.length] = {
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        email: email
+        }
+    }
+
+add('kyle', 'flemington', 'fake@email.com', '604-999-9999')
+
+list()
