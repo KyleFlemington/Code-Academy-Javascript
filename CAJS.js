@@ -1024,3 +1024,191 @@ function add(firstName, lastName, email, phoneNumber) {
 add('kyle', 'flemington', 'fake@email.com', '604-999-9999')
 
 list()
+
+
+
+/* 8.1 Object Review */
+var james = {
+    // add properties to this object!
+    job: 'programmer',
+    married: false
+};
+
+function Person(job, married) {
+    this.job = job;
+    this.married = married;
+}
+
+// create a "gabby" object using the Person constructor!
+
+var gabby = new Person('student', true);
+
+
+
+/* 8.2 Fun with Functions */
+
+function Person(job, married) {
+    this.job = job;
+    this.married = married;
+    // add a "speak" method to Person!
+    this.speak = function() {console.log('Hello!')};
+}
+
+var user = new Person("Codecademy Student",false);
+user.speak();
+
+
+
+/* 8.3 Literally Speaking */
+var james = {
+    job: "programmer",
+    married: false,
+    speak: function(verb) {
+        console.log("Hello, I am feeling" + " "  +verb)
+    }
+};
+
+james.speak("great");
+james.speak("just okay");
+
+
+
+/* 8.4 Can I See Your References */
+var james = {
+    job: "programmer",
+    married: false,
+    sayJob: function() {
+        // complete this method
+        console.log("Hi, I work as a" + " " + this.job)
+    }
+};
+
+// james' first job
+james.sayJob();
+
+// change james' job to "super programmer" here
+james.job = "Super programmer"
+
+// james' second job
+james.sayJob();
+
+
+/* 8.7 Know thyself */
+var myObj = {
+    // finish myObj
+    name: 'Kyle'
+};
+
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+
+
+/* 8.8 Dressed to Impress */
+var suitcase = {
+    shirt: "Hawaiian"
+};
+
+if (suitcase.hasOwnProperty('shorts')) {
+  suitcase.shorts = 'cargo'  
+    }
+console.log(suitcase.shorts)
+
+/* 8.9 Getting IN-timate */
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+for (var property in nyc) {
+    console.log(property)
+    }
+
+
+/* 8.10 List ALL the Properties */
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+// write a for-in loop to print the value of nyc's properties
+
+for (var property in nyc) {
+    console.log(nyc[property])
+    }
+
+/* 8.11 Class in Session */
+function Circle(radius){
+    this.radius = radius;
+    }
+
+/* 8.12 Teach Snoopy */
+var snoopy = new Dog("Beagle");
+// we need you to teach snoopy how to bark here
+snoopy.bark = function() {
+    console.log('bow-wow')
+}
+// this causes an error, because snoopy doesn't know how to bark!
+snoopy.bark();
+
+
+/* 8.13 How do Clases help us? */
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+// a function that prints the name of any given person
+var printPersonName = function (p) {
+  console.log(p.name);
+};
+
+var bob = new Person("Bob Smith", 30);
+printPersonName(bob);
+
+// make a person called me with your name and age
+// then use printPersonName to print your name
+var me = new Person('Kyle F', 27)
+printPersonName(me)
+
+
+/* 8.13 How do classes help Us? */
+function Cat(name, breed) {
+    this.name = name;
+    this.breed = breed;
+}
+
+// let's make some cats!
+var cheshire = new Cat("Cheshire Cat", "British Shorthair");
+var gary = new Cat("Gary", "Domestic Shorthair");
+
+// add a method "meow" to the Cat class that will allow
+// all cats to print "Meow!" to the console
+Cat.prototype.meow = function() {
+    console.log('Meow!')
+    }
+
+// add code here to make the cats meow!
+
+gary.meow()
+
+
+/* 8.16 It's All in the genes */
+// create your Animal class here
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+    }
+
+
+// create the sayName method for Animal
+Animal.prototype.sayName = function() {
+    console.log('Hi my name is' + ' ' + this.name)
+    }
+
+// provided code to test above constructor and method
+var penguin = new Animal("Captain Cook", 2);
+penguin.sayName();
